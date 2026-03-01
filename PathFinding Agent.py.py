@@ -252,6 +252,7 @@ def legend_dot(win, x, y, color, label):
     pygame.draw.rect(win, (0,0,0,60), (x, y+1, 11, 11), 1, border_radius=2)
     win.blit(F_SMALL.render(label, True, TEXT_MUTED), (x+15, y))
 
+# Side panel: renders all buttons, metrics, legend and instructions
 def draw_panel(win, buttons, nodes, cost, ex_time, algo, heuri, rows, status_msg):
     px = GRID_WIDTH + 1
     pw = PANEL_WIDTH - 2
@@ -602,5 +603,6 @@ def main(win):
 if __name__ == "__main__":
 
     main(WIN)
+
 
 
