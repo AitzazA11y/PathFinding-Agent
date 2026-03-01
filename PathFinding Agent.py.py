@@ -389,6 +389,7 @@ def draw_all(win, grid, rows, buttons, nodes=0, cost=0, ex_time=0,
 
 
 # ─── Dynamic Transit ──────────────────────────────────────────────────────────
+# Dynamic mode: agent moves step-by-step and re-plans if path is blocked
 def dynamic_transit(draw_func, grid, path, start, end, rows, algo, heuri):
     if not path: return
     path.reverse()
@@ -601,4 +602,5 @@ def main(win):
 if __name__ == "__main__":
 
     main(WIN)
+
 
