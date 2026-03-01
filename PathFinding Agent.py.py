@@ -153,6 +153,7 @@ class Node:
 
 
 # ─── Heuristics ───────────────────────────────────────────────────────────────
+# Heuristic 1: Manhattan Distance (admissible for 4-directional grids)
 def h_manhattan(p1, p2):
     r1,c1=p1; r2,c2=p2
     return abs(r1-r2)+abs(c1-c2)
@@ -597,4 +598,5 @@ def main(win):
     pygame.quit()
 
 if __name__ == "__main__":
+
     main(WIN)
