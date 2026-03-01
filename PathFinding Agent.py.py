@@ -171,6 +171,7 @@ def reconstruct_path(came_from, current, draw):
         draw()
     return path
 
+# Core search: handles both A* (f = g + h) and GBFS (f = h only)
 def algorithm(draw, grid, start, end, algo_type, heuristic_type):
     start_time = time.time()
     count = 0
@@ -600,3 +601,4 @@ def main(win):
 if __name__ == "__main__":
 
     main(WIN)
+
